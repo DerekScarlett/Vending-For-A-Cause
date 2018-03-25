@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Vending Machine</title>
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron text-center">
+          <h1 id="title">Mouth Watering Snacks Available</h1>
+      <div id="machine">
+
+        <div class="col-sm-6">
+          <ul class="messages">
+            <% for(var i=0; i<messages.length; i++) {%>
+              <li class="message">
+                <span><%= messages[i].snack %></span>
+                <!-- <span><%= messages[i].count %></span> -->
+                <span id="makeGreen"><%= messages[i].thumbUp %></span>
+              </li>
+              <% } %>
+          </ul>
+        </div>
+      </div>
+
+
+      <div id=buttonPad>
+        <p id="payMsg">All Items Cost $1</p>
+        <label for="doritos">Doritos</label>
+        <button id="doritos" value="1" name="snackItem">1</button>
+        <label for="twizzlers">Twizzlers</label>
+        <button id="twizzlers" value="1" name="snackItem">2</button>
+        <label for="crunch">Crunch</label>
+        <button id="crunch" value="1" name="snackItem">3</button>
+        <label for="fanta">Fanta</label>
+        <button id="fanta" value="1" name="snackItem">4</button>
+        <label for="pretzels">Pretzels</label>
+        <button id="pretzels" value="1" name="snackItem">5</button>
+        <label for="myButton">Pay Here</label>
+        <button id="myButton">Pay</button>
+      </div>
+
+
+
+
+
+      <p>Login or Signup:</p>
+
+      <a href="/login" class="btn btn-default"><span class="fa fa-user"></span>Login</a>
+      <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span>Signup</a>
+      <p id="counter">How much $ did we fundraise?</p>
+
+
+
+
+
+
+      <script src="main.js"></script>
+
+</body>
+
+</html>
